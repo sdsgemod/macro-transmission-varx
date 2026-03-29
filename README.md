@@ -9,6 +9,30 @@ It analyzes relationships between:
 - US 10Y Treasury Yield (Global Rates)
 - Brent Crude (Exogenous Shock)
 
+## Executive Summary
+
+This project implements a VARX framework to analyze how equity, FX, and interest rates interact in an emerging market context, with oil acting as an external macro shock.
+
+### Key Insights
+
+- **Oil → FX Transmission:** Brent crude shows a strong positive impact on USD/INR, indicating oil-driven currency depreciation pressure  
+- **Equity–FX Link:** Movements in USD/INR influence equity markets, reflecting capital flow sensitivity  
+- **Global Rates Spillover:** US 10Y yields exhibit lagged transmission effects across both FX and equity markets  
+- **Time-Varying Dynamics:** Cross-asset relationships are not stable and evolve over time  
+
+### Risk Signals
+
+- Rolling correlation shows **periodic breakdowns in the traditional equity–currency relationship**  
+- Indicates **regime shifts where hedging strategies may fail**
+
+### Limitations
+
+- Linear VAR structure may not capture nonlinear shocks  
+- Oil treated as purely exogenous  
+- No structural identification (SVAR not implemented)  
+
+👉 See `Executive_Summary.pdf` for detailed analysis
+
 ## Methodology
 - Data sourced using yfinance
 - Stationarity enforced using ADF-based transformation
